@@ -76,7 +76,7 @@ void infix::process_operator(char op){
             }
             /**assert: operator stack is empty or 
              * current operator precedence > top of stack operator precedence
-             * also checks if op != closed bracket
+             * also checks if op != closed bracket to prevent closed bracket from being added to postfix string
             */
             if (!is_closedbr(op))
                 operator_stack.push(op); 
